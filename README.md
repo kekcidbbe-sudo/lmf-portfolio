@@ -1,4 +1,4 @@
-# Miaomiao Portfolio
+# lvmingfa Portfolio
 
 Personal portfolio website showcasing AI-powered web development and bilingual translation services.
 
