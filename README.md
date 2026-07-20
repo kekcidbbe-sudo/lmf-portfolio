@@ -14,7 +14,7 @@
 ## 技术栈
 - HTML5 + CSS3 + 原生 JavaScript（无框架、无构建）
 - 响应式设计（移动端优先兼容）
-- 部署于 Vercel
+- 部署于 Cloudflare Pages
 
 ## 在线访问
-[miaomiao.vercel.app](https://miaomiao.vercel.app)
+[lmf-portfolio.pages.dev](https://lmf-portfolio.pages.dev)
