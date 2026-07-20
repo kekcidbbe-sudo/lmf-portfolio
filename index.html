@@ -1,250 +1,243 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>苗苗 — AI 驱动的独立开发者</title>
-    <meta name="description" content="应届毕业生，自学AI编程，独立完成Android应用和智能选股分析系统。">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- 自定义光标 -->
-    <div class="cursor-dot" id="cursorDot"></div>
-    <div class="cursor-ring" id="cursorRing"></div>
-
-    <!-- 导航栏 -->
-    <nav class="navbar" id="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo" id="logo">苗<span>苗</span></a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#projects" data-zh="项目" data-en="Projects">项目</a></li>
-                <li><a href="#experience" data-zh="经验" data-en="Experience">经验</a></li>
-                <li><a href="#about" data-zh="关于" data-en="About">关于</a></li>
-                <li><a href="#contact" class="btn-nav" data-zh="联系我" data-en="Contact">联系我</a></li>
-            </ul>
-            <div class="nav-right">
-                <button class="lang-toggle" id="langToggle" aria-label="切换语言">
-                    <span class="lang-label" id="langLabel">EN</span>
-                </button>
-                <button class="hamburger" id="hamburger" aria-label="菜单">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-    <!-- 英雄区 -->
-    <section class="hero" id="hero">
-        <div class="hero-bg-grid"></div>
-        <div class="container hero-container">
-            <div class="hero-content">
-                <div class="hero-tag">
-                    <span class="tag-dot"></span>
-                    <span data-zh="开放机会" data-en="Open to work">开放机会</span>
-                </div>
-                <h1 class="hero-name">
-                    <span class="hero-name-zh">苗苗</span>
-                    <span class="hero-name-en">Miaomiao</span>
-                </h1>
-                <div class="hero-title-wrap">
-                    <p class="hero-title" data-zh="AI 驱动的独立开发者" data-en="AI-Powered Indie Developer">AI 驱动的独立开发者</p>
-                    <div class="hero-title-cursor">|</div>
-                </div>
-                <p class="hero-desc" data-zh="自学 AI 编程，用 Agent 工具把想法变成产品。做过 Android 应用，搭过智能分析系统，日常靠 AI 解决各种问题。" data-en="Self-taught AI programmer who turns ideas into products using Agent tools. Built Android apps, smart analysis systems, and solves problems with AI daily.">自学 AI 编程，用 Agent 工具把想法变成产品。做过 Android 应用，搭过智能分析系统，日常靠 AI 解决各种问题。</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary" data-zh="看看我做了什么" data-en="See my work">看看我做了什么</a>
-                    <a href="#contact" class="btn btn-ghost" data-zh="联系我" data-en="Get in touch">联系我</a>
-                </div>
-                <div class="hero-stack">
-                    <span class="stack-item">Python</span>
-                    <span class="stack-item">Kotlin</span>
-                    <span class="stack-item">LLM</span>
-                    <span class="stack-item">飞书 API</span>
-                    <span class="stack-item">SQLite</span>
-                    <span class="stack-item">Web</span>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="terminal">
-                    <div class="terminal-header">
-                        <div class="terminal-dots">
-                            <span class="dot red"></span>
-                            <span class="dot yellow"></span>
-                            <span class="dot green"></span>
-                        </div>
-                        <span class="terminal-title">miaomiao.sh</span>
-                    </div>
-                    <div class="terminal-body">
-                        <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">cat</span> about.txt</div>
-                        <div class="terminal-line t-output">应届毕业生 · 自学 AI 编程</div>
-                        <div class="terminal-line t-output">日常使用 OpenClaw / Hermes / Claude Code</div>
-                        <div class="terminal-line t-output">独立完成 2 个端到端项目</div>
-                        <div class="terminal-line">&nbsp;</div>
-                        <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">ls</span> projects/</div>
-                        <div class="terminal-line t-output t-highlight">PureSkip/          <span class="t-comment"># Android 广告跳过工具</span></div>
-                        <div class="terminal-line t-output t-highlight">stock-intelligence/ <span class="t-comment"># 智能选股分析系统</span></div>
-                        <div class="terminal-line">&nbsp;</div>
-                        <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cursor">█</span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 项目展示 -->
-    <section class="projects" id="projects">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-number">01</span>
-                <h2 data-zh="我做了什么" data-en="What I've Built">我做了什么</h2>
-            </div>
-
-            <div class="project-card project-card-large">
-                <div class="project-card-header">
-                    <div class="project-icon">📱</div>
-                    <div class="project-meta">
-                        <span class="project-type" data-zh="Android 应用" data-en="Android App">Android 应用</span>
-                        <span class="project-status" data-zh="已发布" data-en="Live">已发布</span>
-                    </div>
-                </div>
-                <h3 class="project-name">纯净跳过 <span>PureSkip</span></h3>
-                <p class="project-desc" data-zh="一款通过无障碍服务自动识别并跳过 APP 开屏广告的安卓工具。完全本地处理，不含联网权限，APK 不到 3MB。从日常痛点出发，在 AI 辅助下完成从需求分析到上架的全流程。" data-en="An Android tool that auto-detects and skips splash ads via Accessibility Service. Fully offline, no internet permission, under 3MB. Built end-to-end with AI assistance from a daily pain point.">一款通过无障碍服务自动识别并跳过 APP 开屏广告的安卓工具。完全本地处理，不含联网权限，APK 不到 3MB。从日常痛点出发，在 AI 辅助下完成从需求分析到上架的全流程。</p>
-                <div class="project-tags">
-                    <span>Kotlin</span>
-                    <span>Accessibility Service</span>
-                    <span>Gradle KTS</span>
-                    <span data-zh="单元测试" data-en="Unit Testing">单元测试</span>
-                    <span>Cloudflare Pages</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://pureskip.pages.dev/" target="_blank" class="project-link">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                        <span data-zh="查看产品网站" data-en="View Product Site">查看产品网站</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="project-card project-card-large">
-                <div class="project-card-header">
-                    <div class="project-icon">📊</div>
-                    <div class="project-meta">
-                        <span class="project-type" data-zh="全栈系统" data-en="Full-Stack System">全栈系统</span>
-                        <span class="project-status" data-zh="运行中" data-en="Running">运行中</span>
-                    </div>
-                </div>
-                <h3 class="project-name" data-zh="智能选股分析系统" data-en="Smart Stock Analysis System">智能选股分析系统</h3>
-                <p class="project-desc" data-zh="一套完整的每日选股分析流程：盘前分析、飞书推送候选、用户交互确认、模拟交易、盘后复盘。接入 LLM 做智能行情分析，通过飞书自建应用实现双向交互，内置多层风控机制。部署在云服务器上，每天自动运行。" data-en="A complete daily stock analysis pipeline: pre-market analysis, Feishu push notifications, interactive confirmation, simulated trading, post-market review. Uses LLM for market analysis, bidirectional Feishu integration, multi-layer risk controls. Deployed on cloud server, runs daily.">一套完整的每日选股分析流程：盘前分析、飞书推送候选、用户交互确认、模拟交易、盘后复盘。接入 LLM 做智能行情分析，通过飞书自建应用实现双向交互，内置多层风控机制。部署在云服务器上，每天自动运行。</p>
-                <div class="project-tags">
-                    <span>Python</span>
-                    <span>LLM</span>
-                    <span>AkShare</span>
-                    <span>飞书 API</span>
-                    <span>SQLite</span>
-                    <span>Web Dashboard</span>
-                </div>
-                <div class="project-links">
-                    <a href="http://49.233.30.134/" target="_blank" class="project-link">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                        <span data-zh="查看 Dashboard" data-en="View Dashboard">查看 Dashboard</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- AI 工具经验 -->
-    <section class="experience" id="experience">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-number">02</span>
-                <h2 data-zh="AI 工具使用经验" data-en="AI Tool Experience">AI 工具使用经验</h2>
-            </div>
-
-            <div class="exp-grid">
-                <div class="exp-card exp-card-main">
-                    <div class="exp-icon">🤖</div>
-                    <h3 data-zh="深度使用多种 Agent 工具" data-en="Deep User of Multiple Agent Tools">深度使用多种 Agent 工具</h3>
-                    <p data-zh="日常使用 OpenClaw、Hermes Agent、Claude Code、Codex、WorkBuddy 等工具，覆盖软件开发、数据分析、视频信息提炼、文档处理等场景。不只是用，还会观察模型输出质量、工具边界和失败场景，不断调整使用策略。" data-en="Daily user of OpenClaw, Hermes Agent, Claude Code, Codex, WorkBuddy — covering software development, data analysis, video extraction, document processing. Not just using them, but observing model output quality, tool boundaries, and failure scenarios, constantly adjusting strategies.">日常使用 OpenClaw、Hermes Agent、Claude Code、Codex、WorkBuddy 等工具，覆盖软件开发、数据分析、视频信息提炼、文档处理等场景。不只是用，还会观察模型输出质量、工具边界和失败场景，不断调整使用策略。</p>
-                </div>
-
-                <div class="exp-card">
-                    <div class="exp-icon">📱</div>
-                    <h3 data-zh="Android 开发" data-en="Android Development">Android 开发</h3>
-                    <p data-zh="Kotlin + Accessibility Service，完成无障碍服务开发、Fragment UI 架构、单元测试编写、APK 混淆与体积优化。" data-en="Kotlin + Accessibility Service: accessibility service development, Fragment UI architecture, unit testing, APK obfuscation and size optimization.">Kotlin + Accessibility Service，完成无障碍服务开发、Fragment UI 架构、单元测试编写、APK 混淆与体积优化。</p>
-                </div>
-
-                <div class="exp-card">
-                    <div class="exp-icon">🗄️</div>
-                    <h3 data-zh="数据与后端" data-en="Data & Backend">数据与后端</h3>
-                    <p data-zh="SQLite 数据库设计与事务管理、LLM API 集成与 Prompt 工程、金融数据接口对接（AkShare）、Python CLI 命令行工具开发。" data-en="SQLite design & transactions, LLM API integration & prompt engineering, financial data API (AkShare), Python CLI tool development.">SQLite 数据库设计与事务管理、LLM API 集成与 Prompt 工程、金融数据接口对接（AkShare）、Python CLI 命令行工具开发。</p>
-                </div>
-
-                <div class="exp-card">
-                    <div class="exp-icon">🌐</div>
-                    <h3 data-zh="Web 与部署" data-en="Web & Deployment">Web 与部署</h3>
-                    <p data-zh="静态页面开发、Web Dashboard 搭建、云服务器部署与定时任务配置（Cron）、Cloudflare Pages / Vercel 静态站点部署。" data-en="Static page development, Web Dashboard construction, cloud server deployment & Cron jobs, Cloudflare Pages / Vercel static site deployment.">静态页面开发、Web Dashboard 搭建、云服务器部署与定时任务配置（Cron）、Cloudflare Pages / Vercel 静态站点部署。</p>
-                </div>
-
-                <div class="exp-card">
-                    <div class="exp-icon">🔗</div>
-                    <h3 data-zh="平台对接" data-en="Platform Integration">平台对接</h3>
-                    <p data-zh="飞书开放平台（自建应用、双向交互卡片、长连接回调）、GitHub 项目管理与版本控制。" data-en="Feishu Open Platform (custom apps, bidirectional interactive cards, long-connection callbacks), GitHub project management & version control.">飞书开放平台（自建应用、双向交互卡片、长连接回调）、GitHub 项目管理与版本控制。</p>
-                </div>
-
-                <div class="exp-card">
-                    <div class="exp-icon">📚</div>
-                    <h3 data-zh="知识库与工作流" data-en="Knowledge Base & Workflows">知识库与工作流</h3>
-                    <p data-zh="搭建个人知识库和自动化工作流，把 AI 工具真正融进日常学习和工作流程里，不是偶尔用用，而是天天在用。" data-en="Built personal knowledge bases and automated workflows. AI tools aren't an occasional thing — they're woven into daily learning and work routines.">搭建个人知识库和自动化工作流，把 AI 工具真正融进日常学习和工作流程里，不是偶尔用用，而是天天在用。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 关于我 -->
-    <section class="about" id="about">
-        <div class="container about-container">
-            <div class="section-header">
-                <span class="section-number">03</span>
-                <h2 data-zh="关于我" data-en="About Me">关于我</h2>
-            </div>
-            <div class="about-content">
-                <p data-zh="性格开朗，做事有耐心。自学 AI 编程的过程中，养成了遇到问题先自己钻研、再寻求解决方案的习惯。面对陌生领域能快速上手，愿意主动学习新技能。" data-en="Cheerful personality with patience for detail. Self-learning AI programming built a habit of digging into problems independently before seeking help. Quick to pick up new domains, always willing to learn new skills.">性格开朗，做事有耐心。自学 AI 编程的过程中，养成了遇到问题先自己钻研、再寻求解决方案的习惯。面对陌生领域能快速上手，愿意主动学习新技能。</p>
-                <p data-zh="善于倾听和沟通，能清晰表达自己的想法，也能理解他人的需求和反馈。在两个独立项目的开发过程中，从需求分析、功能实现到测试交付，每个环节都认真对待。" data-en="Good listener and communicator — can express ideas clearly and understand others' needs and feedback. In two independent projects, took every phase seriously: requirements analysis, feature implementation, testing, and delivery.">善于倾听和沟通，能清晰表达自己的想法，也能理解他人的需求和反馈。在两个独立项目的开发过程中，从需求分析、功能实现到测试交付，每个环节都认真对待。</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 联系方式 -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-number">04</span>
-                <h2 data-zh="联系我" data-en="Get in Touch">联系我</h2>
-            </div>
-            <p class="contact-desc" data-zh="有项目想法？或者只是想聊聊？随时联系我。" data-en="Got a project idea? Or just want to chat? Reach out anytime.">有项目想法？或者只是想聊聊？随时联系我。</p>
-            <div class="contact-links">
-                <a href="mailto:kekcidbbe@gmail.com" class="contact-item">
-                    <span class="contact-icon">✉️</span>
-                    <span>kekcidbbe@gmail.com</span>
-                </a>
-                <a href="https://github.com/kekcidbbe-sudo" target="_blank" class="contact-item">
-                    <span class="contact-icon">💻</span>
-                    <span>GitHub</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 页脚 -->
-    <footer class="footer">
-        <div class="container footer-container">
-            <p data-zh="© 2026 苗苗" data-en="© 2026 Miaomiao">© 2026 苗苗</p>
-            <p data-zh="用 AI 搭建，用心交付" data-en="Built with AI, delivered with care">用 AI 搭建，用心交付</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+1|<!DOCTYPE html>
+2|<html lang="zh-CN">
+3|<head>
+4|    <meta charset="UTF-8">
+5|    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+6|    <title>淼淼 — AI 驱动的独立开发者</title>
+7|    <meta name="description" content="应届毕业生，AI编程，独立完成Android应用和智能选股分析系统。">
+8|    <link rel="preconnect" href="https://fonts.googleapis.com">
+9|    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+10|    <link rel="stylesheet" href="style.css">
+11|</head>
+12|<body>
+13|    <!-- 自定义光标 -->
+14|    <div class="cursor-dot" id="cursorDot"></div>
+15|    <div class="cursor-ring" id="cursorRing"></div>
+16|
+17|    <!-- 导航栏 -->
+18|    <nav class="navbar" id="navbar">
+19|        <div class="container nav-container">
+20|            <a href="#" class="logo" id="logo">苗<span>苗</span></a>
+21|            <ul class="nav-links" id="navLinks">
+22|                <li><a href="#projects" data-zh="项目" data-en="Projects">项目</a></li>
+23|                <li><a href="#experience" data-zh="经验" data-en="Experience">经验</a></li>
+24|                <li><a href="#about" data-zh="关于" data-en="About">关于</a></li>
+25|                <li><a href="#contact" class="btn-nav" data-zh="联系我" data-en="Contact">联系我</a></li>
+26|            </ul>
+27|            <div class="nav-right">
+28|                <button class="lang-toggle" id="langToggle" aria-label="切换语言">
+29|                    <span class="lang-label" id="langLabel">EN</span>
+30|                </button>
+31|                <button class="hamburger" id="hamburger" aria-label="菜单">
+32|                    <span></span><span></span><span></span>
+33|                </button>
+34|            </div>
+35|        </div>
+36|    </nav>
+37|
+38|    <!-- 英雄区 -->
+39|    <section class="hero" id="hero">
+40|        <div class="hero-bg-grid"></div>
+41|        <div class="container hero-container">
+42|            <div class="hero-content">
+43|                <div class="hero-tag">
+44|                    <span class="tag-dot"></span>
+45|                    <span data-zh="开放机会" data-en="Open to work">开放机会</span>
+46|                </div>
+47|                <h1 class="hero-name">
+48|                    <span class="hero-name-zh">淼淼</span>
+49|                    <span class="hero-name-en">Miaomiao</span>
+50|                </h1>
+51|                <div class="hero-title-wrap">
+52|                    <p class="hero-title" data-zh="AI 驱动的独立开发者" data-en="AI-Powered Indie Developer">AI 驱动的独立开发者</p>
+53|                    <div class="hero-title-cursor">|</div>
+54|                </div>
+55|                <p class="hero-desc" data-zh="AI 编程，用 Agent 工具把想法变成产品。做过 Android 应用，搭过智能分析系统，日常靠 AI 解决各种问题。" data-en="AI programmer who turns ideas into products using Agent tools. Built Android apps, smart analysis systems, and solves problems with AI daily.">AI 编程，用 Agent 工具把想法变成产品。做过 Android 应用，搭过智能分析系统，日常靠 AI 解决各种问题。</p>
+56|                <div class="hero-buttons">
+57|                    <a href="#projects" class="btn btn-primary" data-zh="看看我做了什么" data-en="See my work">看看我做了什么</a>
+58|                    <a href="#contact" class="btn btn-ghost" data-zh="联系我" data-en="Get in touch">联系我</a>
+59|                </div>
+60|                <div class="hero-stack">
+61|                    <span class="stack-item">Python</span>
+62|                    <span class="stack-item">Kotlin</span>
+63|                    <span class="stack-item">LLM</span>
+64|                    <span class="stack-item">飞书 API</span>
+65|                    <span class="stack-item">SQLite</span>
+66|                    <span class="stack-item">Web</span>
+67|                </div>
+68|            </div>
+69|        77|                        <span class="terminal-title">miaomiao.sh</span>
+78|                    </div>
+79|                    <div class="terminal-body">
+80|                        <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">cat</span> about.txt</div>
+81|                        <div class="terminal-line t-output">应届毕业生 · AI 编程</div>
+82|                        <div class="terminal-line t-output">日常使用 OpenClaw / Hermes / Claude Code</div>
+83|                        <div class="terminal-line t-output">独立完成 2 个端到端项目</div>
+84|                        <div class="terminal-line">&nbsp;</div>
+85|                        <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">ls</span> projects/</div>
+86|                        <div class="terminal-line t-output t-highlight">PureSkip/          <span class="t-comment"># Android 广告跳过工具</span></div>
+87|                        <div class="terminal-line t-output t-highlight">stock-intelligence/ <span class="t-comment"># 智能选股分析系统</span></div>
+88|                        <div class="terminal-line">&nbsp;</div>
+89|                        <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cursor">█</span></div>
+90|                    </div>
+91|                </div>
+92|            </div>
+93|        </div>
+94|    </section>
+95|
+96|    <!-- 项目展示 -->
+97|    <section class="projects" id="projects">
+98|        <div class="container">
+99|            <div class="section-header">
+100|                <span class="section-number">01</span>
+101|                <h2 data-zh="我做了什么" data-en="What I've Built">我做了什么</h2>
+102|            </div>
+103|
+104|            <div class="project-card project-card-large">
+105|                <div class="project-card-header">
+106|                    <div class="project-icon">📱</div>
+107|                    <div class="project-meta">
+108|                        <span class="project-type" data-zh="Android 应用" data-en="Android App">Android 应用</span>
+109|                        <span class="project-status" data-zh="已发布" data-en="Live">已发布</span>
+110|                    </div>
+111|                </div>
+112|                <h3 class="project-name">纯净跳过 <span>PureSkip</span></h3>
+113|                <p class="project-desc" data-zh="一款通过无障碍服务自动识别并跳过 APP 开屏广告的安卓工具。完全本地处理，不含联网权限，APK 不到 15MB。从日常痛点出发，在 AI 辅助下完成从需求分析到上架的全流程。" data-en="An Android tool that auto-detects and skips splash ads via Accessibility Service. Fully offline, no internet permission, under 15MB. Built end-to-end with AI assistance from a daily pain point.">一款通过无障碍服务自动识别并跳过 APP 开屏广告的安卓工具。完全本地处理，不含联网权限，APK 不到 15MB。从日常痛点出发，在 AI 辅助下完成从需求分析到上架的全流程。</p>
+114|                <div class="project-tags">
+115|                    <span>Kotlin</span>
+116|                    <span>Accessibility Service</span>
+117|                    <span>Gradle KTS</span>
+118|                    <span data-zh="单元测试" data-en="Unit Testing">单元测试</span>
+119|                    <span>Cloudflare Pages</span>
+120|                </div>
+121|                <div class="project-links">
+122|                    <a href="https://pureskip.pages.dev/" target="_blank" class="project-link">
+123|                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+124|                        <span data-zh="查看产品网站" data-en="View Product Site">查看产品网站</span>
+125|                    </a>
+126|                </div>
+127|            </div>
+128|
+129|            <div class="project-card project-card-large">
+130|                <div class="project-card-header">
+131|                    <div class="project-icon">📊</div>
+132|                    <div class="project-meta">
+133|                        <span class="project-type" data-zh="全栈系统" data-en="Full-Stack System">全栈系统</span>
+134|                        <span class="project-status" data-zh="运行中" data-en="Running">运行中</span>
+135|                    </div>
+136|                </div>
+137|                <h3 class="project-name" data-zh="智能选股分析系统" data-en="Smart Stock Analysis System">智能选股分析系统 <span>Stock Intelligence</span></h3>
+138|                <p class="project-desc" data-zh="一套完整的每日选股分析流程：盘前分析、飞书推送候选、用户交互确认、模拟交易、盘后复盘。接入 LLM 做智能行情分析，通过飞书自建应用实现双向交互，内置多层风控机制。部署在云服务器上，每天自动运行。" data-en="A complete daily stock analysis pipeline: pre-market analysis, Feishu push notifications, interactive confirmation, simulated trading, post-market review. Uses LLM for market analysis, bidirectional Feishu integration, multi-layer risk controls. Deployed on cloud server, runs daily.">一套完整的每日选股分析流程：盘前分析、飞书推送候选、用户交互确认、模拟交易、盘后复盘。接入 LLM 做智能行情分析，通过飞书自建应用实现双向交互，内置多层风控机制。部署在云服务器上，每天自动运行。</p>
+139|                <div class="project-tags">
+140|                    <span>Python</span>
+141|                    <span>LLM</span>
+142|                    <span>AkShare</span>
+143|                    <span>飞书 API</span>
+144|                    <span>SQLite</span>
+145|                    <span>Web Dashboard</span>
+146|                </div>
+147|                <div class="project-links">
+148|                    <a href="http://49.233.30.134/" target="_blank" class="project-link">
+149|                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+150|                        <span data-zh="查看 Dashboard" data-en="View Dashboard">查看 Dashboard</span>
+151|                    </a>
+152|                </div>
+153|            </div>
+154|        </div>
+155|    </section>
+156|
+157|    <!-- AI 工具经验 -->
+158|    <section class="experience" id="experience">
+159|        <div class="container">
+160|            <div class="section-header">
+161|                <span class="section-number">02</span>
+162|                <h2 data-zh="AI 工具使用经验" data-en="AI Tool Experience">AI 工具使用经验</h2>
+163|            </div>
+164|
+165|            <div class="exp-grid">
+166|                <div class="exp-card exp-card-main">
+167|                    <div class="exp-icon">🤖</div>
+168|                    <h3 data-zh="深度使用多种 Agent 工具" data-en="Deep User of Multiple Agent Tools">深度使用多种 Agent 工具</h3>
+169|                    <p data-zh="日常使用 OpenClaw、Hermes Agent、Claude Code、Codex、WorkBuddy 等工具，覆盖软件开发、数据分析、视频信息提炼、文档处理等场景。不只是用，还会观察模型输出质量、工具边界和失败场景，不断调整使用策略。" data-en="Daily user of OpenClaw, Hermes Agent, Claude Code, Codex, WorkBuddy — covering software development, data analysis, video extraction, document processing. Not just using them, but observing model output quality, tool boundaries, and failure scenarios, constantly adjusting strategies.">日常使用 OpenClaw、Hermes Agent、Claude Code、Codex、WorkBuddy 等工具，覆盖软件开发、数据分析、视频信息提炼、文档处理等场景。不只是用，还会观察模型输出质量、工具边界和失败场景，不断调整使用策略。</p>
+170|                </div>
+171|
+172|                <div class="exp-card">
+173|                    <div class="exp-icon">📱</div>
+174|                    <h3 data-zh="Android 开发" data-en="Android Development">Android 开发</h3>
+175|                    <p data-zh="Kotlin + Accessibility Service，完成无障碍服务开发、Fragment UI 架构、单元测试编写、APK 混淆与体积优化。" data-en="Kotlin + Accessibility Service: accessibility service development, Fragment UI architecture, unit testing, APK obfuscation and size optimization.">Kotlin + Accessibility Service，完成无障碍服务开发、Fragment UI 架构、单元测试编写、APK 混淆与体积优化。</p>
+176|                </div>
+177|
+178|                <div class="exp-card">
+179|                    <div class="exp-icon">🗄️</div>
+180|                    <h3 data-zh="数据与后端" data-en="Data & Backend">数据与后端</h3>
+181|                    <p data-zh="SQLite 数据库设计与事务管理、LLM API 集成与 Prompt 工程、金融数据接口对接（AkShare）、Python CLI 命令行工具开发。" data-en="SQLite design & transactions, LLM API integration & prompt engineering, financial data API (AkShare), Python CLI tool development.">SQLite 数据库设计与事务管理、LLM API 集成与 Prompt 工程、金融数据接口对接（AkShare）、Python CLI 命令行工具开发。</p>
+182|                </div>
+183|
+184|                <div class="exp-card">
+185|                    <div class="exp-icon">🌐</div>
+186|                    <h3 data-zh="Web 与部署" data-en="Web & Deployment">Web 与部署</h3>
+187|                    <p data-zh="静态页面开发、Web Dashboard 搭建、云服务器部署与定时任务配置（Cron）、Cloudflare Pages / Vercel 静态站点部署。" data-en="Static page development, Web Dashboard construction, cloud server deployment & Cron jobs, Cloudflare Pages / Vercel static site deployment.">静态页面开发、Web Dashboard 搭建、云服务器部署与定时任务配置（Cron）、Cloudflare Pages / Vercel 静态站点部署。</p>
+188|                </div>
+189|
+190|                <div class="exp-card">
+191|                    <div class="exp-icon">🔗</div>
+192|                    <h3 data-zh="平台对接" data-en="Platform Integration">平台对接</h3>
+193|                    <p data-zh="飞书开放平台（自建应用、双向交互卡片、长连接回调）、GitHub 项目管理与版本控制。" data-en="Feishu Open Platform (custom apps, bidirectional interactive cards, long-connection callbacks), GitHub project management & version control.">飞书开放平台（自建应用、双向交互卡片、长连接回调）、GitHub 项目管理与版本控制。</p>
+194|                </div>
+195|
+196|                <div class="exp-card">
+197|                    <div class="exp-icon">📚</div>
+198|                    <h3 data-zh="知识库与工作流" data-en="Knowledge Base & Workflows">知识库与工作流</h3>
+199|                    <p data-zh="搭建个人知识库和自动化工作流，把 AI 工具真正融进日常学习和工作流程里，不是偶尔用用，而是天天在用。" data-en="Built personal knowledge bases and automated workflows. AI tools aren't an occasional thing — they're woven into daily learning and work routines.">搭建个人知识库和自动化工作流，把 AI 工具真正融进日常学习和工作流程里，不是偶尔用用，而是天天在用。</p>
+200|                </div>
+201|            </div>
+202|        </div>
+203|    </section>
+204|
+205|    <!-- 关于我 -->
+206|    <section class="about" id="about">
+207|        <div class="container about-container">
+208|            <div class="section-header">
+209|                <span class="section-number">03</span>
+210|                <h2 data-zh="关于我" data-en="About Me">关于我</h2>
+211|            </div>
+212|            <div class="about-content">
+213|                <p data-zh="性格开朗，做事有耐心。AI 编程的过程中，养成了遇到问题先自己钻研、再寻求解决方案的习惯。面对陌生领域能快速上手，愿意主动学习新技能。" data-en="Cheerful personality with patience for detail. Self-learning AI programming built a habit of digging into problems independently before seeking help. Quick to pick up new domains, always willing to learn new skills.">性格开朗，做事有耐心。AI 编程的过程中，养成了遇到问题先自己钻研、再寻求解决方案的习惯。面对陌生领域能快速上手，愿意主动学习新技能。</p>
+214|                <p data-zh="善于倾听和沟通，能清晰表达自己的想法，也能理解他人的需求和反馈。在两个独立项目的开发过程中，从需求分析、功能实现到测试交付，每个环节都认真对待。" data-en="Good listener and communicator — can express ideas clearly and understand others' needs and feedback. In two independent projects, took every phase seriously: requirements analysis, feature implementation, testing, and delivery.">善于倾听和沟通，能清晰表达自己的想法，也能理解他人的需求和反馈。在两个独立项目的开发过程中，从需求分析、功能实现到测试交付，每个环节都认真对待。</p>
+215|            </div>
+216|        </div>
+217|    </section>
+218|
+219|    <!-- 联系方式 -->
+220|    <section class="contact" id="contact">
+221|        <div class="container">
+222|            <div class="section-header">
+223|                <span class="section-number">04</span>
+224|                <h2 data-zh="联系我" data-en="Get in Touch">联系我</h2>
+225|            </div>
+226|            <p class="contact-desc" data-zh="有项目想法？或者只是想聊聊？随时联系我。" data-en="Got a project idea? Or just want to chat? Reach out anytime.">有项目想法？或者只是想聊聊？随时联系我。</p>
+227|            <div class="contact-links">
+228|                <a href="mailto:2795542990@qq.com" class="contact-item">
+229|                    <span class="contact-icon">✉️</span>
+230|                    <span>2795542990@qq.com</span>
+231|                </a>
+232|                <a href="https://github.com/kekcidbbe-sudo" target="_blank" class="contact-item">
+233|                    <span class="contact-icon">💻</span>
+234|                    <span>GitHub</span>
+235|                </a>
+236|            </div>
+237|        </div>
+238|    </section>
+239|
+240|    <!-- 页脚 -->
+241|    <footer class="footer">
+242|        <div class="container footer-container">
+243|            <p data-zh="© 2026 淼淼" data-en="© 2026 Miaomiao">© 2026 淼淼</p>
+244|            <p data-zh="用 AI 搭建，用心交付" data-en="Built with AI, delivered with care">用 AI 搭建，用心交付</p>
+245|        </div>
+246|    </footer>
+247|
+248|    <script src="script.js"></script>
+249|</body>
+250|</html>
+251|
